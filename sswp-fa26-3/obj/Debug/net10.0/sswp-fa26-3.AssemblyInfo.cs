@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sswp-fa26-3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c67ad8f1aab242db586c930d16fc82c9a19343ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("sswp-fa26-3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sswp-fa26-3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
