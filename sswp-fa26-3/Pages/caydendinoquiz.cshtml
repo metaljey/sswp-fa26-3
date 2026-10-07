@@ -79,6 +79,38 @@
         <br>
         <input type="submit" value="Submit Answers">
     </form>
+<!-- This empty h2 tag is where the JavaScript will print the final score -->
+    <h2 id="resultDisplay"></h2>
 
+    <script>
+        document.getElementById("quizForm").onsubmit = function(event) {
+            
+            event.preventDefault();
+
+            let score = 0;
+
+            
+            let ans1 = document.querySelector('input[name="q1"]:checked');
+            let ans2 = document.querySelector('input[name="q2"]:checked');
+            let ans3 = document.querySelector('input[name="q3"]:checked');
+            let ans4 = document.querySelector('input[name="q4"]:checked');
+            let ans5 = document.querySelector('input[name="q5"]:checked');
+            let ans6 = document.querySelector('input[name="q6"]:checked');
+
+            
+            if (ans1 && ans1.value === "B") { score++; }
+            if (ans2 && ans2.value === "B") { score++; }
+            if (ans3 && ans3.value === "A") { score++; }
+            if (ans4 && ans4.value === "A") { score++; }
+            if (ans5 && ans5.value === "B") { score++; }
+            if (ans6 && ans6.value === "B") { score++; }
+
+            // Calculate percentage
+            let percentage = Math.round((score / 6) * 100);
+
+            
+            document.getElementById("resultDisplay").innerHTML = "You scored " + percentage + "% (" + score + " out of 6 correct)!";
+        };
+    </script>
 </body>
 </html>
