@@ -1,0 +1,76 @@
+﻿
+@page
+@model sswp_fa26_3.Pages.TherizinosaurusModel
+
+@{
+    ViewData["Title"] = "Therizinosaurus";
+}
+
+<div class="container mt-4">
+
+    <a asp-page="/jondino" class="btn btn-secondary mb-3">
+        Back to Dino Home
+    </a>
+
+    <h1>Therizinosaurus</h1>
+    <h4>The Dinosaur with Giant Claws</h4>
+
+    <!-- Dinosaur Picture -->
+    <div class="text-center my-4">
+        <img src="~/images/therizinosaurus.jpg"
+             alt="Therizinosaurus"
+             style="width: 350px; max-width: 100%; height: auto;" />
+    </div>
+
+    <h2>About Therizinosaurus</h2>
+
+    <p>
+        Therizinosaurus was a large dinosaur that lived approximately 70 million years ago during the Late Cretaceous period. It lived in what is now Mongolia.
+    </p>
+
+    <p>
+        Therizinosaurus was famous for its enormous claws, which could reach approximately three feet in length. Despite its frightening appearance, scientists believe it mainly ate plants.
+    </p>
+
+    <p>
+        This unusual dinosaur belonged to the theropod group, which also included Tyrannosaurus rex. Scientists believe Therizinosaurus had feathers and used its claws for activities such as reaching vegetation.
+    </p>
+
+    <hr />
+
+    <h2>Prehistoric Fortune Generator</h2>
+
+    <p>
+        Click the button below to discover your prehistoric adventure!
+    </p>
+
+    <form method="post">
+        <button type="submit" class="btn btn-success">
+            Generate My Fortune
+        </button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Story))
+    {
+        <div class="alert alert-success mt-4">
+            <h4>Your Prehistoric Fortune!</h4>
+            <p>@Model.Story</p>
+        </div>
+    }
+
+    <hr />
+
+    <h2>Review Questions</h2>
+
+    <ol>
+        <li>Where did Therizinosaurus live?</li>
+        <li>What was Therizinosaurus famous for?</li>
+        <li>What did Therizinosaurus mainly eat?</li>
+    </ol>
+
+    <a asp-page="/Quetzalcoatlus"
+       class="btn btn-primary mt-3">
+        Explore Quetzalcoatlus
+    </a>
+
+</div>

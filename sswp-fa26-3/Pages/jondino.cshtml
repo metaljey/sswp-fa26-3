@@ -1,0 +1,59 @@
+﻿
+@page
+@model sswp_fa26_3.Pages.jondinoModel
+
+@{
+    ViewData["Title"] = "My Dino Project";
+}
+
+<div class="container mt-4">
+
+    <h1 class="text-center">My Dinosaur Project</h1>
+
+    <p class="text-center">
+        Learn about two amazing prehistoric creatures!
+    </p>
+
+    <div class="row mt-4">
+
+        <!-- Quetzalcoatlus -->
+        <div class="col-md-6 text-center mb-4">
+            <h3>Quetzalcoatlus</h3>
+
+            <img src="~/images/quetzalcoatlus.jpg"
+                 alt="Quetzalcoatlus"
+                 style="width: 250px; height: 180px; object-fit: contain;" />
+
+            <p class="mt-3">
+                Quetzalcoatlus was one of the largest
+                flying reptiles that ever lived.
+            </p>
+
+            <a asp-page="/Quetzalcoatlus"
+               class="btn btn-primary">
+                Learn More
+            </a>
+        </div>
+
+        <!-- Therizinosaurus -->
+        <div class="col-md-6 text-center mb-4">
+            <h3>Therizinosaurus</h3>
+
+            <img src="~/images/therizinosaurus.jpg"
+                 alt="Therizinosaurus"
+                 style="width: 250px; height: 180px; object-fit: contain;" />
+
+            <p class="mt-3">
+                Therizinosaurus was a unique dinosaur
+                known for its very long claws.
+            </p>
+
+            <a asp-page="/Therizinosaurus"
+               class="btn btn-primary">
+                Learn More
+            </a>
+        </div>
+
+    </div>
+
+</div>

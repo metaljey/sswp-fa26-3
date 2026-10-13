@@ -1,0 +1,118 @@
+﻿
+@page
+@model sswp_fa26_3.Pages.QuetzalcoatlusModel
+
+@{
+    ViewData["Title"] = "Quetzalcoatlus";
+}
+
+<div class="container mt-4">
+
+    <a asp-page="/jondino" class="btn btn-secondary mb-3">
+        Back to Dino Home
+    </a>
+
+    <h1>Quetzalcoatlus</h1>
+    <h4>The Giant Flying Reptile</h4>
+
+    <!-- Dinosaur Picture -->
+    <div class="text-center my-4">
+        <img src="~/images/quetzalcoatlus.jpg" alt="Quetzalcoatlus" style="width: 350px; max-width: 100%; height: auto;" />
+    </div>
+
+    <h2>About Quetzalcoatlus</h2>
+
+    <p>
+        Quetzalcoatlus was one of the largest flying animals ever known. It lived during the Late Cretaceous period, approximately 68 to 66 million years ago.
+    </p>
+
+    <p>
+        Its wingspan was approximately 33 feet.Unlike dinosaurs, Quetzalcoatlus belonged to a group of flying reptiles called pterosaurs.
+    </p>
+
+    <p>
+        Quetzalcoatlus lived in North America.Scientists believe it spent time walking on land and hunting small animals.
+    </p>
+
+    <h2>Dinosaur Facts</h2>
+
+    <ul>
+        @foreach (var fact in Model.DinoFacts)
+        {
+            <li>
+                <strong>@fact.Key:</strong>
+                @fact.Value
+            </li>
+        }
+    </ul>
+
+    <hr />
+
+    <h2>Quetzalcoatlus Mad Lib Game</h2>
+
+    <p>
+        Enter three words to create your own prehistoric adventure!
+    </p>
+
+    <form method="post">
+
+        <div class="mb-3">
+            <label class="form-label">
+                Enter a place:
+            </label>
+            <input asp-for="Place"
+                   class="form-control"
+                   placeholder="Example: a jungle"
+                   required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">
+                Enter an action (past tense):
+            </label>
+            <input asp-for="Action"
+                   class="form-control"
+                   placeholder="Example: danced"
+                   required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">
+                Enter a food:
+            </label>
+            <input asp-for="Food"
+                   class="form-control"
+                   placeholder="Example: fish"
+                   required />
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Generate Story
+        </button>
+
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Story))
+    {
+        <div class="alert alert-success mt-4">
+            <h4>Your Prehistoric Story</h4>
+            <p>@Model.Story</p>
+        </div>
+    }
+
+    <hr />
+
+    <h2>Review Questions</h2>
+
+    <ol>
+        <li>Was Quetzalcoatlus a dinosaur or a pterosaur?</li>
+        <li>What was its approximate wingspan?</li>
+        <li>During which geological period did it live?</li>
+    </ol>
+
+    <a asp-page="/Therizinosaurus"
+       class="btn btn-primary mt-3">
+        Explore Therizinosaurus
+    </a>
+
+</div>
