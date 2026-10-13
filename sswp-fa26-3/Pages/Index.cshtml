@@ -1,10 +1,79 @@
-﻿@page
+﻿
+@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Dinosaur World";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome group3</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center bg-light rounded p-5 mb-4">
+    <h1 class="display-5 fw-bold">Welcome to Our Dinosaur World!</h1>
+
+   
+
+    
+</div>
+
+<h2 class="text-center mb-4">Explore Our Project</h2>
+
+<div class="row g-4">
+
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3>Spinosaurus</h3>
+                <p>Learn about this amazing prehistoric predator.</p>
+                <a asp-page="/spino" class="btn btn-primary">
+                    Explore
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3>Ceratosaurus</h3>
+                <p>Discover this fascinating Jurassic dinosaur.</p>
+                <a asp-page="/Ceratosaurus" class="btn btn-primary">
+                    Explore
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3>Jonathan's Dinosaurs</h3>
+                <p>
+                    Explore Quetzalcoatlus and Therizinosaurus,
+                    with interactive activities.
+                </p>
+                <a asp-page="/jondino" class="btn btn-primary">
+                    Explore
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3>Cayden's Dinosaur Quiz</h3>
+                <p>Learn about this amazing prehistoric predator.</p>
+                <a asp-page="/caydendinoquiz" class="btn btn-primary">
+                    Take Quiz
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="text-center mt-5 mb-4">
+    <h2>Meet Our Team</h2>
+    
+    <p class="fw-bold">
+        Brady * Cayden * Jonathan
+    </p>
 </div>
